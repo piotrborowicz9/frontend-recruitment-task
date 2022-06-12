@@ -1,0 +1,33 @@
+@import 'variables';
+
+@mixin center-fixed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin primaryButton {
+    font-family: $primary-font;
+    font-weight: $bold;
+    font-size: 1rem;
+    padding: 1rem 2.5rem;
+    border-radius: 2rem;
+    background: $primary;
+    color: $white;
+    border: none;
+    transition: background 250ms;
+    display: block;
+}
+
+@mixin secondaryButton {
+    @include primaryButton;
+    padding: 0.7rem 1.75rem;
+    font-size: 0.9rem;
+}

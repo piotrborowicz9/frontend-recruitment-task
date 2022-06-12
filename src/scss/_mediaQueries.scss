@@ -1,0 +1,27 @@
+//tablets
+@media all and (min-width: 768px) {
+    body .container {
+        margin-top: 4rem;
+    }
+
+    .modal {
+        width: 65%;
+    }
+}
+
+//laptops and desktop computers
+@media all and (min-width: 1024px) {
+    body .container .hero {
+        flex-direction: row;
+        margin: 6rem 0;
+        gap: 5rem;
+    }
+
+    .modal {
+        width: 45%;
+
+        .modal-content > * {
+            margin: 1.6rem 2.5rem;
+        }
+    }
+}

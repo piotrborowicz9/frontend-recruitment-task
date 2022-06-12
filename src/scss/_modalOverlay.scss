@@ -1,0 +1,45 @@
+//modal container
+.modal {
+    @include center-fixed;
+    transition: width 1s;
+    background-color: $white;
+    width: 95%;
+    padding: 1rem;
+
+    .modal-content {
+        display: block;
+        margin: 1rem 1rem;
+
+        > * {
+            margin: 1rem;
+        }
+
+        h3 {
+            font-size: 2.5rem;
+            font-weight: $bold;
+        }
+    }
+
+    .close-modal:hover {
+        cursor: pointer;
+    }
+
+    .close-modal {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: none;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $overlay;
+}
