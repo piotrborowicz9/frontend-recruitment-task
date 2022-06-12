@@ -39,7 +39,7 @@
                         infrastructures and SaaS platforms, managed via a single
                         app with no hardware required.
                     </p>
-                    <button class="show-modal">Button</button>
+                    <button type="button" class="show-modal">Button</button>
                 </div>
             </section>
         </div>
@@ -48,11 +48,16 @@
         <div class="modal hidden">
             <div class="modal-content">
                 <h3>Alert!</h3>
-                <p class="alert-content"></p>
-                <button class="reset-counter hidden">Reset</button>
+                <p class="alert-content">
+                    You have clicked <b><span id="counter"></span> times</b> to
+                    related button
+                </p>
+                <button type="button" class="reset-counter hidden">
+                    Reset
+                </button>
             </div>
 
-            <button class="close-modal">
+            <button type="button" class="close-modal">
                 <span class="material-symbols-outlined"> close </span>
             </button>
         </div>

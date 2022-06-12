@@ -2,7 +2,7 @@
 
 //variables
 const modal = document.querySelector('.modal');
-const paragraph = document.querySelector('.alert-content');
+const paragraph = document.querySelector('#counter');
 const overlay = document.querySelector('.overlay');
 const btnShowModal = document.querySelectorAll('.show-modal');
 const btnCloseModal = document.querySelector('.close-modal');
@@ -14,6 +14,7 @@ const modalSessionStart = () => {
     counter += 1;
     window.localStorage.setItem('counter', counter);
 };
+
 const modalSessionStop = () => {
     counter = 0;
     window.localStorage.setItem('counter', counter);
@@ -39,14 +40,14 @@ btnShowModal.forEach((e) => {
         }
 
         showModal();
-        paragraph.innerHTML = `You have clicked <b>${counter} times</b> to related button`;
+        paragraph.innerHTML = counter;
     });
 });
 
 btnResetCounter.addEventListener('click', () => {
     modalSessionStop();
     btnResetCounter.classList.add('hidden');
-    paragraph.innerHTML = `You have clicked <b>${counter} times</b> to related button`;
+    paragraph.innerHTML = counter;
 });
 
 btnCloseModal.addEventListener('click', closeModal);
